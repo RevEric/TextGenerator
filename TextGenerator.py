@@ -26,7 +26,7 @@ while(running == 1):
     
     print("\n")
     answer = input("Enter Y to continue, anything else to quit: ")
-    if(answer[0].lower() != "y"):
+    if(answer.lower() != "y"):
         running = 0
     else:
         print("")
