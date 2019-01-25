@@ -1,4 +1,5 @@
 import random
+import os
 import sys
 import time
 
@@ -10,6 +11,11 @@ while(running == 1):
     current = list()
     charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,? "
 
+    clear = lambda: os.system('cls')
+    clear()
+
+    time.sleep(3)
+
     i = 0
     current.append("")
     while (i < len(target)):
@@ -19,7 +25,7 @@ while(running == 1):
         
         current[i] = random.choice(charset)
         print ("    ", ''.join(current), '',end='\r')
-        time.sleep(.003)
+        time.sleep(.00001)
         if(current[i] == target[i]):
             i = i + 1
             current.append("")
